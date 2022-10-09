@@ -1,0 +1,248 @@
+<?xml version="1.0" ?>
+<robot name="pacifista" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+<xacro:include filename="$(find pacifista_description)/urdf/materials.xacro" />
+<xacro:include filename="$(find pacifista_description)/urdf/pacifista.trans" />
+<xacro:include filename="$(find pacifista_description)/urdf/pacifista.gazebo" />
+<link name="base_link">
+  <inertial>
+    <origin xyz="0.0018839019844237544 8.237494584475128e-18 0.00891071264996895" rpy="0 0 0"/>
+    <mass value="2.1667793938138287"/>
+    <inertia ixx="0.001458" iyy="0.014379" izz="0.015278" ixy="0.0" iyz="-0.0" ixz="-1.7e-05"/>
+  </inertial>
+  <visual>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://pacifista_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://pacifista_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="front_1">
+  <inertial>
+    <origin xyz="0.015000000000000013 0.0 0.005459472360990085" rpy="0 0 0"/>
+    <mass value="0.5028932300466133"/>
+    <inertia ixx="0.001245" iyy="7.2e-05" izz="0.001248" ixy="0.0" iyz="-0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.15 -0.0 -0.004" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://pacifista_description/meshes/front_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.15 -0.0 -0.004" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://pacifista_description/meshes/front_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="rear__1__1">
+  <inertial>
+    <origin xyz="-0.015000000000000013 0.0 0.005459472361009781" rpy="0 0 0"/>
+    <mass value="0.5028932300466133"/>
+    <inertia ixx="0.001245" iyy="7.2e-05" izz="0.001248" ixy="-0.0" iyz="0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.15 -0.0 -0.004" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://pacifista_description/meshes/rear__1__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.15 -0.0 -0.004" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://pacifista_description/meshes/rear__1__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="front_left_1">
+  <inertial>
+    <origin xyz="1.942890293094024e-16 0.007500000000000007 6.59735075706977e-07" rpy="0 0 0"/>
+    <mass value="1.1009878458794609"/>
+    <inertia ixx="0.001442" iyy="0.002842" izz="0.001442" ixy="0.0" iyz="0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.165 -0.07 -0.014" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://pacifista_description/meshes/front_left_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.165 -0.07 -0.014" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://pacifista_description/meshes/front_left_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="front_right_1">
+  <inertial>
+    <origin xyz="1.942890293094024e-16 -0.007499999999999979 6.59735075706977e-07" rpy="0 0 0"/>
+    <mass value="1.1009878458794609"/>
+    <inertia ixx="0.001442" iyy="0.002842" izz="0.001442" ixy="-0.0" iyz="0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.165 0.07 -0.014" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://pacifista_description/meshes/front_right_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.165 0.07 -0.014" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://pacifista_description/meshes/front_right_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="rear_right_1">
+  <inertial>
+    <origin xyz="-1.3877787807814457e-16 -0.007499999999999979 6.59735075675752e-07" rpy="0 0 0"/>
+    <mass value="1.100987845879461"/>
+    <inertia ixx="0.001442" iyy="0.002842" izz="0.001442" ixy="0.0" iyz="-0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.165 0.07 -0.014" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://pacifista_description/meshes/rear_right_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.165 0.07 -0.014" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://pacifista_description/meshes/rear_right_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="rear_left_1">
+  <inertial>
+    <origin xyz="-1.3877787807814457e-16 0.007500000000000007 6.597350756722825e-07" rpy="0 0 0"/>
+    <mass value="1.100987845879461"/>
+    <inertia ixx="0.001442" iyy="0.002842" izz="0.001442" ixy="-0.0" iyz="0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.165 -0.07 -0.014" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://pacifista_description/meshes/rear_left_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.165 -0.07 -0.014" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://pacifista_description/meshes/rear_left_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="lidar_1">
+  <inertial>
+    <origin xyz="3.901291635943797e-18 0.0 0.0072778660919538" rpy="0 0 0"/>
+    <mass value="0.14297214861681104"/>
+    <inertia ixx="1.6e-05" iyy="1.6e-05" izz="2.8e-05" ixy="0.0" iyz="-0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.0 -0.0 -0.05" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://pacifista_description/meshes/lidar_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.0 -0.0 -0.05" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://pacifista_description/meshes/lidar_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="camera_1">
+  <inertial>
+    <origin xyz="0.0 0.0 0.01500000000000001" rpy="0 0 0"/>
+    <mass value="0.09419999999999999"/>
+    <inertia ixx="1e-05" iyy="1e-05" izz="6e-06" ixy="0.0" iyz="0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.13 -0.0 -0.018" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://pacifista_description/meshes/camera_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.13 -0.0 -0.018" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://pacifista_description/meshes/camera_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<joint name="Rigid1" type="fixed">
+  <origin xyz="0.15 0.0 0.004" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="front_1"/>
+</joint>
+
+<joint name="Rigid2" type="fixed">
+  <origin xyz="-0.15 0.0 0.004" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="rear__1__1"/>
+</joint>
+
+<joint name="Rev3" type="continuous">
+  <origin xyz="0.015 0.07 0.01" rpy="0 0 0"/>
+  <parent link="front_1"/>
+  <child link="front_left_1"/>
+  <axis xyz="0.0 1.0 0.0"/>
+</joint>
+
+<joint name="Rev4" type="continuous">
+  <origin xyz="0.015 -0.07 0.01" rpy="0 0 0"/>
+  <parent link="front_1"/>
+  <child link="front_right_1"/>
+  <axis xyz="0.0 1.0 0.0"/>
+</joint>
+
+<joint name="Rev5" type="continuous">
+  <origin xyz="-0.015 -0.07 0.01" rpy="0 0 0"/>
+  <parent link="rear__1__1"/>
+  <child link="rear_right_1"/>
+  <axis xyz="0.0 1.0 0.0"/>
+</joint>
+
+<joint name="Rev6" type="continuous">
+  <origin xyz="-0.015 0.07 0.01" rpy="0 0 0"/>
+  <parent link="rear__1__1"/>
+  <child link="rear_left_1"/>
+  <axis xyz="0.0 1.0 0.0"/>
+</joint>
+
+<joint name="Rigid7" type="fixed">
+  <origin xyz="0.0 0.0 0.05" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="lidar_1"/>
+</joint>
+
+<joint name="Rigid8" type="fixed">
+  <origin xyz="0.13 0.0 0.018" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="camera_1"/>
+</joint>
+
+</robot>
