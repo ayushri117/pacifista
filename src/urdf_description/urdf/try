@@ -1,0 +1,27 @@
+<joint name="Rev31" type="continuous">
+  <origin xyz="0.18 0.1975 0.024" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="front_right_1"/>
+  <axis xyz="1.0 0.0 0.0"/>
+</joint>
+
+<joint name="Rev32" type="continuous">
+  <origin xyz="0.18 -0.3865 0.024" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="rear_right_1"/>
+  <axis xyz="1.0 -0.0 -0.0"/>
+</joint>
+
+<joint name="Rev33" type="continuous">
+  <origin xyz="-0.18 0.1975 0.024" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="front_left_1"/>
+  <axis xyz="1.0 -0.0 0.0"/>
+</joint>
+
+<joint name="Rev34" type="continuous">
+  <origin xyz="-0.18 -0.3865 0.024" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="rear_left_1"/>
+  <axis xyz="1.0 -0.0 0.0"/>
+</joint>
